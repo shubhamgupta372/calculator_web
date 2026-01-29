@@ -30,27 +30,13 @@ calculator_web/
 
 ## 🎨 User Interface
 
-```
-╔═══════════════════════╗
-║        0              ║  Display Screen
-╠═══════════════════════╣
-║  C   │ DEL  │ ÷  │ ×  ║
-╠═════╪══════╪════╪════╣
-║  7   │  8   │ 9  │ −  ║
-╠═════╪══════╪════╪════╣
-║  4   │  5   │ 6  │ +  ║
-╠═════╪══════╪════╪════╣
-║  1   │  2   │ 3  │ =  ║
-╠═════╧══════╪════╪════╣
-║      0      │ .  │    ║
-╚═════════════╧════╧════╝
-```
+![Calculator UI](/images/calculator-ui.png)
 
-**Button Legend:**
-- 🔴 **Red (C, DEL)**: Function buttons
-- 🟠 **Orange (÷, ×, −, +)**: Operation buttons  
-- 🟢 **Green (=)**: Equals button
-- 🔵 **Blue (0-9, .)**: Number buttons
+**Button Colors:**
+- 🔴 **Red (C, DEL)**: Function buttons - Clear and Delete
+- 🔵 **Blue (÷, ×, −, +)**: Operation buttons - Mathematical operations
+- 🟢 **Green (=)**: Equals button - Calculate result
+- ⚪ **White (0-9, .)**: Number buttons - Input digits
 
 ## 🚀 Getting Started
 
