@@ -109,19 +109,88 @@ In `/app/styles/style.css`, adjust:
 
 ## 🧪 Testing
 
-Test file located at: `tests/test_main.js`
+### End-to-End (E2E) Tests with Pytest + Selenium
 
-To add tests:
-1. Install a test framework (Jest, Mocha, or Node assert)
-2. Write tests in `test_main.js`
-3. Run tests via `npm test` or similar command
+Comprehensive browser automation tests for all calculator functionality.
 
-Example test:
-```javascript
-const assert = require('assert');
-// Test code here
-assert.strictEqual(2 + 2, 4);
+#### Prerequisites for Testing
+```bash
+# Install test dependencies
+pip install -r requirements.txt
 ```
+
+This installs:
+- `pytest` — Python testing framework
+- `selenium` — Browser automation
+- `webdriver-manager` — Auto-manages ChromeDriver
+
+#### Running Tests
+
+**1. Start the calculator server** (in one terminal):
+```bash
+cd /Users/shubham/Desktop/calculator_web/app
+python3 -m http.server 8000
+```
+
+**2. Run tests** (in another terminal):
+
+Run all tests (headless mode - faster):
+```bash
+cd /Users/shubham/Desktop/calculator_web
+pytest tests/test_calculator_e2e.py -v
+```
+
+Run tests with visible browser (see tests in action):
+```bash
+pytest tests/test_calculator_e2e.py -v --show-browser
+```
+
+Run specific test class:
+```bash
+pytest tests/test_calculator_e2e.py::TestCalculatorBasicOperations -v
+```
+
+Run single test:
+```bash
+pytest tests/test_calculator_e2e.py::TestCalculatorBasicOperations::test_addition -v
+```
+
+Run with detailed output:
+```bash
+pytest tests/test_calculator_e2e.py -v -s
+```
+
+#### Test Coverage
+
+The test suite includes **14 comprehensive tests** across 4 classes:
+
+**TestCalculatorBasicOperations** (5 tests)
+- ✅ Addition: 5 + 3 = 8
+- ✅ Subtraction: 10 - 4 = 6
+- ✅ Multiplication: 6 × 7 = 42
+- ✅ Division: 20 ÷ 4 = 5
+- ✅ Decimal operations: 3.5 + 2.5 = 6
+
+**TestCalculatorFunctions** (3 tests)
+- ✅ Clear button resets to 0
+- ✅ Delete button removes last digit
+- ✅ Chained operations: 5 + 3 + 2 = 10
+
+**TestCalculatorKeyboard** (3 tests)
+- ✅ Typing numbers with keyboard
+- ✅ Keyboard operations and equals key
+- ✅ Backspace key for delete
+
+**TestCalculatorEdgeCases** (3 tests)
+- ✅ Leading zeros handled correctly
+- ✅ Multiple decimal points prevented
+- ✅ Negative results work properly
+
+#### Test Files
+
+- `tests/test_calculator_e2e.py` — Main E2E test suite (14 tests)
+- `tests/conftest.py` — Pytest configuration and fixtures
+- `requirements.txt` — Python dependencies
 
 ---
 
