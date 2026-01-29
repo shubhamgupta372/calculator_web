@@ -30,54 +30,27 @@ calculator_web/
 
 ## 🎨 User Interface
 
-<div style="display: flex; justify-content: center; margin: 20px 0;">
-  <div style="
-    width: 280px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  ">
-    <input type="text" readonly value="0" style="
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 15px;
-      background-color: #1a1a2e;
-      color: #00ff88;
-      border: none;
-      border-radius: 8px;
-      font-size: 24px;
-      text-align: right;
-      box-sizing: border-box;
-      font-weight: bold;
-      font-family: 'Courier New', monospace;
-    ">
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
-      <button style="padding: 12px; background-color: #ff6b6b; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">C</button>
-      <button style="padding: 12px; background-color: #ff6b6b; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">DEL</button>
-      <button style="padding: 12px; background-color: #ffa500; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">÷</button>
-      <button style="padding: 12px; background-color: #ffa500; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">×</button>
-      
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">7</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">8</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">9</button>
-      <button style="padding: 12px; background-color: #ffa500; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">−</button>
-      
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">4</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">5</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">6</button>
-      <button style="padding: 12px; background-color: #ffa500; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">+</button>
-      
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">1</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">2</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">3</button>
-      <button style="padding: 12px; background-color: #00d084; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">=</button>
-      
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer; grid-column: span 2;">0</button>
-      <button style="padding: 12px; background-color: #2d3561; color: white; border: none; border-radius: 8px; cursor: pointer;">.</button>
-    </div>
-  </div>
-</div>
+```
+╔═══════════════════════╗
+║        0              ║  Display Screen
+╠═══════════════════════╣
+║  C   │ DEL  │ ÷  │ ×  ║
+╠═════╪══════╪════╪════╣
+║  7   │  8   │ 9  │ −  ║
+╠═════╪══════╪════╪════╣
+║  4   │  5   │ 6  │ +  ║
+╠═════╪══════╪════╪════╣
+║  1   │  2   │ 3  │ =  ║
+╠═════╧══════╪════╪════╣
+║      0      │ .  │    ║
+╚═════════════╧════╧════╝
+```
+
+**Button Legend:**
+- 🔴 **Red (C, DEL)**: Function buttons
+- 🟠 **Orange (÷, ×, −, +)**: Operation buttons  
+- 🟢 **Green (=)**: Equals button
+- 🔵 **Blue (0-9, .)**: Number buttons
 
 ## 🚀 Getting Started
 
